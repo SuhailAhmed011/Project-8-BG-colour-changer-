@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background changer</title>
+    <style>
+      body {
+        background-color: lightpink;
+        padding: 60px 100px;
+        margin: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .btn{
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        border-radius: 50%;
+        border: solid 1px gainsboro;
+        cursor: pointer;
+      }
+      
+      #white{
+        background-color: white;
+      }
+
+      #aqua{
+        background-color: aqua;
+      }
+
+      #violet{
+        background-color: lightskyblue;
+      }
+
+      #black{
+        background-color: black;
+      }
+
+      #color-switcher{
+        
+        text-align: right;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About us</h1>
+    <br />
+    <p class="text">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab error aut
+      quasi enim voluptas, culpa architecto vero maiores velit est quam
+      provident ullam deleniti placeat exercitationem consectetur rem, optio,
+      delectus similique? Praesentium, minus! Dolores, unde? Exercitationem vero
+      minus earum corrupti non. Neque aspernatur, ducimus odio perspiciatis aut
+      quis, est ab suscipit voluptates, quaerat obcaecati explicabo itaque id
+      earum laboriosam ad accusamus asperiores sequi iure maiores nam?
+      Blanditiis, optio. Voluptatibus architecto hic, quae sed quam ad
+      voluptates consequuntur animi veniam libero, reprehenderit laborum facere
+      iusto possimus rerum culpa officiis cupiditate, ullam quibusdam ipsa!
+      Excepturi, molestiae quam harum dicta debitis, repellat minus voluptatibus
+      soluta, expedita et odio exercitationem magnam quae tenetur. Cumque iusto
+      laudantium dolorem eligendi dicta magni aliquam est rem nihil esse quasi
+      quidem itaque, aspernatur reiciendis molestiae tenetur consequatur commodi
+      accusantium. Id quaerat illo cupiditate, consequuntur officiis est
+      asperiores, sapiente, aspernatur aperiam dolorum vel cum enim consectetur
+      voluptates unde suscipit sed libero iure voluptatibus aliquam repudiandae.
+      Omnis reiciendis aliquam beatae libero voluptatum quae quibusdam, cumque
+      qui id obcaecati neque doloremque? Minus illo, ratione odit alias
+      voluptatem, laudantium atque perspiciatis ipsam sequi fugiat aut?
+      Expedita, facilis cumque a itaque adipisci aspernatur, enim dolorem libero
+      illo placeat maiores. Quo dolor dicta veritatis?
+    </p>
+
+
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text");
+            if(color == '#000000'){
+                
+                for(let elm of txt){
+                    elm.style.color = "white";
+                }
+            }else{
+                for(let elm of txt){
+                    elm.style.color = "black";
+            }
+        }
+    }
+    </script>
+  </body>
+</html>
+        
